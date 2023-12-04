@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Zadatak 6</title>
+</head>
+<body>
+ <script type="text/javascript">
+    var polje = new Array(1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 74, 11, 33);
+
+    // a. Ispis dužine polja
+    document.write("Inicijalna dužina polja: " + polje.length + "<br>");
+console.log("Inicijalna dužina polja: " + polje.length + "<br>");
+    // b. Sortiranje polja od najvećeg ka najmanjem
+    var sortiranoNajveciNajmanji = polje.slice().sort(function(a, b) { return b - a; });
+    document.write("Sortirano od najvećeg ka najmanjem: " + sortiranoNajveciNajmanji + "<br>");
+console.log("Sortirano od najvećeg ka najmanjem: " + sortiranoNajveciNajmanji + "<br>");
+    // c. Sortiranje polja od najmanjeg ka najvećem
+    var sortiranoNajmanjiNajveci = polje.slice().sort(function(a, b) { return a - b; });
+    document.write("Sortirano od najmanjeg ka najvećem: " + sortiranoNajmanjiNajveci + "<br>");
+   console.log("Sortirano od najmanjeg ka najvećem: " + sortiranoNajmanjiNajveci + "<br>");
+    // d. Uklanjanje zadnjeg člana polja iz sortiranog polja
+    sortiranoNajmanjiNajveci.pop();
+    document.write("Sortirano polje bez zadnjeg člana: " + sortiranoNajmanjiNajveci + "<br>");
+    console.log("Sortirano polje bez zadnjeg člana: " + sortiranoNajmanjiNajveci + "<br>");
+    // e. Dodavanje novih članova polja na kraj
+    sortiranoNajmanjiNajveci.push(19, 22);
+    document.write("Polje nakon dodavanja novih članova: " + sortiranoNajmanjiNajveci + "<br>");
+    console.log("Polje nakon dodavanja novih članova: " + sortiranoNajmanjiNajveci + "<br>");
+    // f. Definiranje novog polja polje2 i spajanje s prethodnim poljem
+    var polje2 = ["Banana", "Orange", "Apple", "Mango"];
+    var polje_final = polje.concat(polje2);
+    document.write("Spojeno polje: " + polje_final + "<br>");
+    console.log("Spojeno polje: " + polje_final + "<br>");
+ </script>
+</body>
+</html>

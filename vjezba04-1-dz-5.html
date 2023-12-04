@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Aritmetička sredina</title>
+</head>
+<body>
+ <script type="text/javascript">
+    var n = prompt("Unesite broj 'n' za izračun aritmetičke sredine od 1 do n:");
+
+    if (n !== null && !isNaN(n) && n > 0) 
+    {
+        var sum = 0;
+        for (var k = 1; k <= n; k++) 
+        {
+            sum += k;
+        }
+        var aritmetickaSredina = sum / n;
+
+        document.write("Aritmetička sredina brojeva od 1 do " + n + " je: " + aritmetickaSredina + "<br/>");
+         console.log("Aritmetička sredina brojeva od 1 do " + n + " je: " + aritmetickaSredina + "<br/>");
+    } 
+    else
+    {
+        document.write("Niste unijeli ispravan broj.");
+        console.log("Niste unijeli ispravan broj.");
+    }
+ </script>
+</body>
+</html>
