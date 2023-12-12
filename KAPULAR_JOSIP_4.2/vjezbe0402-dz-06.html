@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zbrajanje brojeva</title>
+  <script>
+    function zbroji() {
+      // Dohvaćanje vrijednosti unesenih brojeva iz prvog i drugog polja
+      var prviBroj = parseFloat(document.getElementById('broj1').value);
+      var drugiBroj = parseFloat(document.getElementById('broj2').value);
+      
+      // Provjera jesu li unesene vrijednosti brojevi
+      if (!isNaN(prviBroj) && !isNaN(drugiBroj)) {
+        // Zbrajanje unesenih brojeva
+        var rezultat = prviBroj + drugiBroj;
+        
+        // Postavljanje rezultata zbrajanja u treće polje rezultata
+        document.getElementById('rezultatZbrajanja').value = rezultat;
+      } else {
+        alert('Molimo unesite valjane brojčane vrijednosti!');
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="broj1">Unesite prvi broj:</label>
+    <input type="text" id="broj1" name="broj1">
+    
+    <label for="broj2">Unesite drugi broj:</label>
+    <input type="text" id="broj2" name="broj2">
+    
+    <button type="button" onclick="zbroji()">Zbroji</button>
+    
+    <label for="rezultatZbrajanja">Rezultat zbrajanja:</label>
+    <input type="text" id="rezultatZbrajanja" name="rezultatZbrajanja" readonly>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zbrajanje brojeva</title>
+  <script>
+    function zbroji() {
+      // Dohvaćanje vrijednosti unesenih brojeva iz prvog i drugog polja
+      var prviBroj = parseFloat(document.getElementById('broj1').value);
+      var drugiBroj = parseFloat(document.getElementById('broj2').value);
+      
+      // Provjera jesu li unesene vrijednosti brojevi
+      if (!isNaN(prviBroj) && !isNaN(drugiBroj)) {
+        // Zbrajanje unesenih brojeva
+        var rezultat = prviBroj + drugiBroj;
+        
+        // Postavljanje rezultata zbrajanja u treće polje rezultata
+        document.getElementById('rezultatZbrajanja').value = rezultat;
+      } else {
+        alert('Molimo unesite valjane brojčane vrijednosti!');
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="broj1">Unesite prvi broj:</label>
+    <input type="text" id="broj1" name="broj1">
+    
+    <label for="broj2">Unesite drugi broj:</label>
+    <input type="text" id="broj2" name="broj2">
+    
+    <button type="button" onclick="zbroji()">Zbroji</button>
+    
+    <label for="rezultatZbrajanja">Rezultat zbrajanja:</label>
+    <input type="text" id="rezultatZbrajanja" name="rezultatZbrajanja" readonly>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zbrajanje brojeva</title>
+  <script>
+    function zbroji() 
+    {
+      
+      var prviBroj = parseFloat(document.getElementById('broj1').value);
+      var drugiBroj = parseFloat(document.getElementById('broj2').value);
+      
+      
+      if (!isNaN(prviBroj) && !isNaN(drugiBroj)) 
+      {
+        
+        var rezultat = prviBroj + drugiBroj;
+        document.getElementById('rezultatZbrajanja').value = rezultat;
+      } 
+      else 
+      {
+        alert('Molimo unesite valjane brojčane vrijednosti!');
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="broj1">Unesite prvi broj:</label>
+    <input type="text" id="broj1" name="broj1">
+    
+    <label for="broj2">Unesite drugi broj:</label>
+    <input type="text" id="broj2" name="broj2">
+    
+    <button type="button" onclick="zbroji()">Zbroji</button>
+    
+    <label for="rezultatZbrajanja">Rezultat zbrajanja:</label>
+    <input type="text" id="rezultatZbrajanja" name="rezultatZbrajanja" readonly>
+  </form>
+</body>
+</html>

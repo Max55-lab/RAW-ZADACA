@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prekidač za žarulju</title>
+  <style>
+    /* Stilizacija prekidača */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: gray;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Stilizacija žarulje */
+    .bulb {
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      border-radius: 50%;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bulb img {
+      display: none;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    input:checked + .slider + .bulb img {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox" onchange="toggleLight(this)">
+    <span class="slider"></span>
+  </label>
+  <div class="bulb">
+    <img id="bulbImage" src="KAPULAR_JOSIP_4.2.jpg" alt="Isključena žarulja">
+  </div>
+
+  <script>
+    function toggleLight(element) {
+      var bulbImage = document.getElementById('bulbImage');
+      if (element.checked) {
+        bulbImage.src = 'path_to_on_image.jpg';
+      } else {
+        bulbImage.src = 'path_to_off_image.jpg';
+      }
+    }
+  </script>
+</body>
+</html>

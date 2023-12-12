@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function AritmetickaSredina(arr) {
+      const proizvod = arr.reduce((acc, num) => acc * num, 1);
+      return Math.pow(proizvod, 1 / arr.length);
+    }
+
+    function geometrijskaSredina(arr) {
+      const product = arr.reduce((acc, num) => acc * num, 1);
+      return Math.pow(product, 1 / arr.length);
+    }
+
+    function IzracunajSrednji() {
+      const unos = prompt('Unesite skup brojeva odvojenih zarezom:');
+      const brojevi = unos.split(',').map(num => parseFloat(num.trim()));
+
+      const aritmeticka = AritmetickaSredina(brojevi);
+      const geometrijska = geometrijskaSredina(brojevi);
+
+      const rezultat = document.createElement('div');
+      rezultat.innerHTML = `
+        <p>Uneseni brojevi: ${brojevi.join(', ')}</p>
+        <p>Aritmetička sredina: ${aritmeticka.toFixed(2)}</p>
+        <p>Geometrijska sredina: ${geometrijska.toFixed(2)}</p>
+      `;
+
+      document.body.appendChild(rezultat);
+    }
+
+    window.onload = IzracunajSrednji;
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function AritmetickaSredina(arr) {
+      const proizvod = arr.reduce((acc, num) => acc * num, 1);
+      return Math.pow(proizvod, 1 / arr.length);
+    }
+
+    function geometrijskaSredina(arr) {
+      const product = arr.reduce((acc, num) => acc * num, 1);
+      return Math.pow(product, 1 / arr.length);
+    }
+
+    function IzracunajSrednji() {
+      const unos = prompt('Unesite skup brojeva odvojenih zarezom:');
+      const brojevi = unos.split(',').map(num => parseFloat(num.trim()));
+
+      const aritmeticka = AritmetickaSredina(brojevi);
+      const geometrijska = geometrijskaSredina(brojevi);
+
+      const rezultat = document.createElement('div');
+      rezultat.innerHTML = `
+        <p>Uneseni brojevi: ${brojevi.join(', ')}</p>
+        <p>Aritmetička sredina: ${aritmeticka.toFixed(2)}</p>
+        <p>Geometrijska sredina: ${geometrijska.toFixed(2)}</p>
+      `;
+
+      document.body.appendChild(rezultat);
+    }
+
+    window.onload = IzracunajSrednji;
+  </script>
+</body>
+</html>

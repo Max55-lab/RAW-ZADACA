@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		function promijeniBoju()
+		{
+			var boja='#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+			document.body.style.backgroundColor=boja;
+			document.getElementById('trenutnaBoja').innerText='Trenutna boja:'+boja;
+		}
+	</script>
+</head>
+<body>
+	<button onclick="promijeniBoju()">Promijeni Pozadinu</button>
+	<p id="trenutnaBoja">Trenutna boja:</p>
+</body>
+</html>

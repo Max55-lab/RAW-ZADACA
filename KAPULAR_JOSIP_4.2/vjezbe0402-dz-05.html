@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validacija registarske oznake BiH</title>
+  <script>
+    function validirajOznaku(oznaka) 
+    {
+     
+      var regex = /^[A-ZČĆŽŠĐ]{2}\s\d{3}\s[A-ZČĆŽŠĐ]{1,2}$/;
+      
+ 
+      return regex.test(oznaka);
+    }
+
+    function validirajFormu() 
+    {
+      var unesenaOznaka = document.getElementById('oznakaVozila').value;
+      
+      if (validirajOznaku(unesenaOznaka)) 
+      {
+        alert('Ispravan format registarske oznake!');
+        return true;
+      } 
+      else 
+      {
+        alert('Neispravan format registarske oznake! Ispravan format je npr. ABC 123.');
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validirajFormu()">
+    <label for="oznakaVozila">Unesite registarsku oznaku (npr. ABC 123):</label>
+    <input type="text" id="oznakaVozila" name="oznakaVozila">
+    <button type="submit">Validiraj</button>
+  </form>
+</body>
+</html>

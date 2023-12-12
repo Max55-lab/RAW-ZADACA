@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=	, initial-scale=1.0">
+	<title>Document</title>
+
+<script type="text/javascript">
+function izracunaj(op) 
+{
+  var operand1=praseFloat(document.getElementById('operand1').value);
+  var operand2=praseFloat(document.getElementById('operand2').value);
+  var result;
+
+  switch(op)
+  {
+       case 'zbrajanje'
+       result=operand1+operand2;
+       break;   
+       case 'oduzimanje'
+       	result=operand1-operand2;
+       	break;
+       case 'mnozenje'
+       	result=operand1*operand2;
+       	break;
+       case 'dijeljenje'
+       	result=operand1/operand2;
+       	break;
+
+       case 'sinus'
+       	result=Math.sin(operand1);
+       	break;
+
+       case 'kosinus'
+       	result=Math.cos(operand1);
+       	break;
+
+       case 'tanges'
+       	result=Math.tan(operand1);
+       	break;
+
+       case 'log'
+       	result=Math.log10(operand1);
+       	break;
+
+       case 'ln'
+        result=Math.log(operand1);
+       	break;
+
+       case 'kvadriranje'
+        result=Math.pow(operand1, 2);
+       	break;
+
+       case 'kubiranje'
+       	result=Math.pow(operand1, 3);
+       	break;
+
+       case 'potenciranje'
+       result=Math.sin(operand1, operand2);
+       	break;
+
+       default:
+       	result='Nepoznata operacija';
+       	break;
+  }
+  alert('result');
+}	
+</script>
+
+</head>
+<body>
+<label for="operand1">Operand1</label>
+<input type="number" name="operand1">
+<br><br>
+<label for="operand2">Operand2</label>
+<input type="number" name="operand2">
+<br><br>
+<button onclick="izracunaj('zbrajanje')">+</button>
+<button onclick="izracunaj('oduzimanje')">-</button>
+<button onclick="izracunaj('mnozenje')">*</button>
+<button onclick="izracunaj('dijeljenje')">/</button>
+<br><br>
+<button onclick="izracunaj('sinus')">sin</button>
+<button onclick="izracunaj('kosinus')">cos</button>
+<button onclick="izracunaj('tanges')">tan</button>
+<br><br>
+<button onclick="izracunaj('ln')"></button>
+<button onclick="izracunaj('log')"></button>
+<br><br>
+<button onclick="izracunaj('kvadriranje')">x<sup>2</button>
+<button onclick="izracunaj('kubiranje')">x<sup>3</button>
+<button onclick="izracunaj('potenciranje')">x<sup>y</button>
+</body>
+</html>

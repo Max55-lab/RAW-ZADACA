@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Izračun godina</title>
+</head>
+<body>
+  <form onsubmit="izracunajGodine(); return false;">
+    <label for="datum">Unesite datum rođenja:</label>
+    <input type="date" id="datum" name="datum">
+    <label for="godina">Unesite godinu rođenja:</label>
+    <input type="number" id="godina" name="godina" placeholder="YYYY" min="1900" max="2099">
+    <button type="submit">Izračunaj</button>
+  </form>
+
+  <script type="text/javascript">
+    function izracunajGodine() {
+      var uneseniDatum = new Date(document.getElementById('datum').value);
+      var unesenaGodina = document.getElementById('godina').value;
+      
+      // Provjera da li je unesena godina validna
+      if (unesenaGodina.length !== 4 || isNaN(unesenaGodina)) {
+        alert('Unesite ispravnu godinu u formatu YYYY.');
+        return;
+      }
+
+      var danasnjiDatum = new Date();
+      var godinaRodjenja = parseInt(unesenaGodina);
+      var godine = danasnjiDatum.getFullYear() - godinaRodjenja;
+
+      // Provjera da li je rođendan već prošao ove godine
+      if (danasnjiDatum.getMonth() < uneseniDatum.getMonth() || (danasnjiDatum.getMonth() === uneseniDatum.getMonth() && danasnjiDatum.getDate() < uneseniDatum.getDate())) {
+        godine--;
+      }
+
+      alert('Imate ' + godine + ' godina.');
+    }
+  </script>
+</body>
+</html>

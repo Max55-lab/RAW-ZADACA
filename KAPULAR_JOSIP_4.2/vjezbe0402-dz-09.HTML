@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prekidač za žarulju</title>
+</head>
+<body>
+  <div id="switchContainer">
+    <img id="switch" src="pic_switch_off.png" alt="Switch Off" onclick="changeImage()">
+    <img id="bulb" src="pic_bulb_off.png" alt="Bulb Off">
+  </div>
+
+  <script>
+    function changeImage() {
+      var switchImage = document.getElementById('switch');
+      var bulbImage = document.getElementById('bulb');
+
+      if (switchImage.src.match("pic_switch_off")) {
+        switchImage.src = "pic_switch_on.png";
+        bulbImage.src = "pic_bulb_on.png";
+      } else {
+        switchImage.src = "pic_switch_off.png";
+        bulbImage.src = "pic_bulb_off.png";
+      }
+    }
+  </script>
+</body>
+</html>
